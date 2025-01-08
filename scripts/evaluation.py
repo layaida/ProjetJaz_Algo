@@ -1,4 +1,4 @@
-from pyspark.ml.evaluation import ClusteringEvaluator 
+from pyspark.ml.evaluation import ClusteringEvaluator
 
 def evaluate_model(model, df, prediction_col="prediction"):
     predictions = model.transform(df)

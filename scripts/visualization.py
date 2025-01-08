@@ -1,8 +1,6 @@
-import matplotlib.pyplot as plt 
-import pandas as pd
+import matplotlib.pyplot as plt
 
 def plot_clusters(spark_df, cluster_col="prediction", x_col="price", y_col="freight_value"):
-    # Convert to Pandas DataFrame
     pdf = spark_df.select(x_col, y_col, cluster_col).toPandas()
     
     plt.figure(figsize=(10, 6))
